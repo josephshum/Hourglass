@@ -50,16 +50,17 @@ function updateContent() {
 ////INPUTS
 
 // keyboard: space bar
-document.body.onkeyup = function (e) {
-    var k = e.keyCode;
-    // go forward if it's spacebar or right arrow
-    if (k == 32 || k == 39) {
-        goForward();
-    }
-    else if (k == 37) {
-        goBack();
-    }
-}
+// disabling keyboard
+//document.body.onkeyup = function (e) {
+//    var k = e.keyCode;
+//    // go forward if it's spacebar or right arrow
+//    if (k == 32 || k == 39) {
+//        goForward();
+//    }
+//    else if (k == 37) {
+//        goBack();
+//    }
+//}
 
 // previous button
 $(function () {
