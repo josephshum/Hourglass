@@ -1,8 +1,8 @@
-/* 
+/*
  *	COLOURS
  *	=============================================
  */
- 
+
 body,
 .nav--nested .link--current > a {
 	color: #414143;
@@ -51,7 +51,7 @@ input,
 textarea,
 select {
 	border-color: hsla(0, 0%, 0%, .4);
-	background-color: hsla(0, 0%, 100%, .4);
+	/*background-color: hsla(0, 0%, 100%, .4);*/
 }
 
 input[type="file"]::-ms-value {
@@ -62,11 +62,11 @@ input[type="file"]::-ms-value {
 input:hover,
 textarea:hover,
 select:hover {
-    border-color: hsla(0, 0%, 0%, .6); 
+    border-color: hsla(0, 0%, 0%, .6);
 }
 
 input[type="file"]:hover::-ms-value {
-    border-color: hsla(0, 0%, 0%, .6); 
+    border-color: hsla(0, 0%, 0%, .6);
 }
 
 input:focus, textarea:focus {
@@ -82,7 +82,7 @@ input[type="file"]:focus::-ms-value {
 input:disabled,
 input[readonly],
 fieldset[disabled] input,
-textarea[disabled], textarea[readonly], 
+textarea[disabled], textarea[readonly],
 fieldset[disabled] textarea {
 	border-color: transparent;
 	background-color: hsla(0, 0%, 0%, .2);
@@ -108,16 +108,9 @@ textarea:invalid {
 button,
 input[type="button"],
 .button {
-	background-color: hsla(0, 0%, 0%, .2);
+	/*background-color: hsla(0, 0%, 0%, .2);*/
 }
 
-input[type="file"]::-webkit-file-upload-button {
-	background-color: hsla(0, 0%, 0%, .2);
-}
-
-input[type="file"]::-ms-browse {
-	background-color: hsla(0, 0%, 0%, .2);
-}
 
 .button,
 .button:hover,
@@ -200,7 +193,7 @@ select option:checked {
 	color: #fff;
 }
 
-/* 
+/*
 	@bug #71
 	Firefox needs option bg to be set to white or checked style leaks
 */
@@ -241,7 +234,7 @@ input[type="checkbox"]:active::-ms-check {
 	border-color: transparent;
 	color: #000;
 }
- 
+
 input[type="radio"]:active::-ms-check,
 input[type="radio"]:active:checked::-ms-check {
     color: hsla(0, 0%, 0%, .6);
@@ -258,7 +251,7 @@ fieldset[disabled] input[type="radio"]::-ms-check {
 }
 
 /* needed so active styles don’t override disabled styles */
-input[type="radio"]:disabled:checked::-ms-check, 
+input[type="radio"]:disabled:checked::-ms-check,
 fieldset[disabled] input[type="radio"]:checked::-ms-check {
    color: hsla(0, 0%, 0%, .2);
 }
@@ -285,7 +278,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 input[type="range"]::-moz-range-thumb {
 	background-color: #0078d7;
-} 
+}
 
 input[type="range"]::-ms-thumb {
 	background-color: #0078d7;
@@ -297,7 +290,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 
 input[type="range"]:hover::-moz-range-thumb {
 	background-color: #1f1f1f;
-} 
+}
 
 input[type="range"]:hover::-ms-thumb {
 	background-color: #1f1f1f;
