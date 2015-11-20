@@ -1,0 +1,127 @@
+﻿body
+{
+}
+.venntooltip {
+    position: absolute;
+    text-align: center;
+    width: 128px;
+    height: 28px;
+    background: #333;
+    color: #ddd;
+    padding: 2px;
+    border: 0px;
+    border-radius: 8px;
+    opacity: 0;
+    font-size: 16px;
+}
+
+.vennContainer {
+    text-align: center;
+    font-size: 16px;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#dateSlider {
+    width: 75%;
+}
+
+button,
+input[type="button"],
+.button:link, .button:visited {
+/*    min-width: 10rem;*/
+/*    max-width: 100%;*/
+    border: 2px solid transparent;
+    padding: .4rem 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+
+    /* needed for .button as doesn’t always get default control behaviours */
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* DISABLED state styles */
+
+button:disabled,
+input[type="button"]:disabled,
+select:disabled,
+.button:disabled, .button.disabled,
+fieldset[disabled] button,
+fieldset[disabled] input[type="button"],
+fieldset[disabled] select,
+fieldset[disabled] .button {
+    cursor: not-allowed;
+    pointer-events: none;
+    outline: none;
+}
+
+/* This style for a primary button on the entire page, for added visual emphasis */
+button.button--page-primary,
+input[type="button"].button--page-primary,
+.button.button--page-primary {
+    padding: 1.2rem;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Actions */
+.actions a,
+.actions .button {
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+
+/* Textual buttons */
+.button--textual {
+    vertical-align: top;
+    min-width: 0;
+    padding: 0;
+    border: 0 none;
+    font-weight: 400;
+}
+
+.button--textual,
+.button--textual:hover,
+.button--textual:active {
+    background: transparent;
+}
+
+/* Icon-only buttons */
+.button--icon,
+.button--icon:hover,
+.button--icon:active {
+    border: none;
+    background: transparent;
+}
+
+.button--icon {
+    position: relative;
+    min-width: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    text-indent: 100%;
+}
+
+.button--icon::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    line-height: 1;
+    text-indent: 0;
+}
+

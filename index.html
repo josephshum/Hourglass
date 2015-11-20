@@ -4,49 +4,24 @@
     <meta charset="utf-8">
     <title>Reveal.js 3 Slide Demo</title>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="VennDiagramSlide.css">
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 
     <style>
         * {
             box-sizing: border-box;
         }
 
-        /*body {
+        body {
             font-size: 16px;
             font-family: "Segoe UI light", Segoe, 'Segoe WP', "Lucida Grande", "Lucida Sans", Tahoma, Verdana, Arial, sans-serif;
 
-        }*/
-
-        .venntooltip {
-            position: absolute;
-            text-align: center;
-            width: 128px;
-            height: 28px;
-            background: #333;
-            color: #ddd;
-            padding: 2px;
-            border: 0px;
-            border-radius: 8px;
-            opacity: 0;
-            font-size: 16px;
         }
 
-        .vennContainer {
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .group:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        #dateSlider {
-            width: 100%;
-        }
     </style>
 
 </head>
@@ -59,29 +34,33 @@
 
             <!-- ALL SLIDES GO HERE -->
             <!-- Each section element contains an individual slide -->
+
+
+
+
             <!-- SLIDE 1 -->
             <section>
-                <p>Interop History</p>
-                    <div id="block-right-bottom">
-                        <div class="controlHolder" id="slider">
-                            <p id="subTitle"></p>
-                            <input id="dateSlider" type=range multiple step="1" min="0" max="1" value="0" list="ticMarks"><datalist id="ticMarks"></datalist>
-                        </div>
-                        <div class="controlHolder" id="stepButtons">
-                            <input type="button" id="prevDataSet" value="  <<  " />
-                            <input type="button" id="nextDataSet" value="  >>  " />
-                        </div>
-                    </div>
-                <div id="block-left" class="column">
-                    <div class="vennContainer" id="venn"></div>
+
+                <h1>Microsoft Edge</h1>
+                <object type="image/svg+xml" data="images/edgeLogo.svg" width=25% height=25%>Your browser does not support SVG</object>
+
+            </section>
+
+
+            <!-- SLIDE 1 -->
+            <section>
+                <h2>Our Interop History</h2>
+                <div class="vennContainer" id="venn"></div>
+                <div id="slider">
+                    <p id="subTitle"></p>
+                    <input id="dateSlider" type=range multiple step="1" min="0" max="1" value="0" list="ticMarks"><datalist id="ticMarks"></datalist>
+                </div>
+                <div id="stepButtons">
+                    <input type="button" id="prevDataSet" value="<<" />
+                    <input type="button" id="nextDataSet" value=">>" />
                 </div>
             </section>
 
-            <!-- SLIDE 2 -->
-            <section>
-                <h1>Microsoft Edge</h1>
-                <p>How far we have come...</p>
-            </section>
 
             <!-- SLIDE 3 -->
             <section id="show-a-link">
@@ -89,6 +68,7 @@
                 <p>Slide 2 discussed here</p>
                 <p>See <a href="http://www.htmlcheats.com">HTMLCheats.com</a></p>
             </section>
+
 
             <!-- SLIDE 4 -->
             <section>
@@ -110,6 +90,17 @@
     <script>
         // Required, even if empty.
         Reveal.initialize({
+            //parallaxBackgroundImage: "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg",
+
+            //// Parallax background size
+            //parallaxBackgroundSize: "2100px 900px", // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+            //// Number of pixels to move the parallax background per slide
+            //// - Calculated automatically unless specified
+            //// - Set to 0 to disable movement along an axis
+            //parallaxBackgroundHorizontal: 200,
+            //parallaxBackgroundVertical: 50
+
 
         });
     </script>

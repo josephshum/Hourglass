@@ -26,6 +26,27 @@ slider.min = sliderMin;
 
 var count = 0;
 
+
+//// Initialize and update Venn.js
+
+// call this to create and resize the venn diagram
+function buildVennDiagram() {
+    return venn.VennDiagram()
+        //.width(window.innerWidth * .5)
+        //.height(window.innerHeight * .4)
+    ;
+
+}
+
+// call to update everything on screen
+function updateContent() {
+    chart = buildVennDiagram();
+    div.datum(sets[count].data).call(chart);
+    //document.getElementById("annotationText").innerHTML = sets[count].text;
+    document.getElementById("dateSlider").value = dates[count];
+    document.getElementById("subTitle").innerHTML = sets[count].date;
+}
+
 ////INPUTS
 
 // keyboard: space bar
@@ -68,22 +89,6 @@ function goForward() {
     updateContent();
 }
 
-// call to update everything on screen
-function updateContent() {
-    chart = buildVennDiagram();
-    div.datum(sets[count].data).call(chart);
-    //document.getElementById("annotationText").innerHTML = sets[count].text;
-    document.getElementById("dateSlider").value = dates[count];
-    document.getElementById("subTitle").innerHTML = sets[count].date;
-}
-
-// call this to create and resize the venn diagram
-function buildVennDiagram() {
-    return venn.VennDiagram()
-                 .width(window.innerWidth * .5)
-                 .height(window.innerHeight * .6);
-
-}
 
 // Venn Diagram Stuff
 var chart = buildVennDiagram();
